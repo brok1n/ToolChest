@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>485</width>
-    <height>315</height>
+    <width>500</width>
+    <height>400</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>400</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>密码生成器</string>
@@ -18,7 +30,7 @@
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>250</y>
+      <y>330</y>
       <width>151</width>
       <height>51</height>
      </rect>
@@ -31,10 +43,13 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>270</y>
-      <width>111</width>
+      <y>335</y>
+      <width>101</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将密码生成结果保存到桌面文件中&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
      <string>存储到桌面</string>
@@ -46,10 +61,10 @@
    <widget class="QPlainTextEdit" name="resultEdt">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>10</y>
+      <x>310</x>
+      <y>30</y>
       <width>171</width>
-      <height>291</height>
+      <height>351</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -59,13 +74,71 @@
      <string/>
     </property>
    </widget>
+   <widget class="QCheckBox" name="resetResultCbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;清空结果列表，填入本次生成的密码。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>重置输出框</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>-5</y>
+      <width>3</width>
+      <height>410</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>310</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结果列表</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>11</y>
       <width>281</width>
-      <height>231</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -73,6 +146,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
         <widget class="QCheckBox" name="numCbox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选后 生成密码中会包含数字&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>数字</string>
          </property>
@@ -83,6 +159,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="lowerCbox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选后 生成密码中会包含小写字母&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>小写字母</string>
          </property>
@@ -93,6 +172,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="upperCbox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选后 生成密码中会包含大写字母&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>大写字母</string>
          </property>
@@ -104,6 +186,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QCheckBox" name="specialCbox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选后 可以在右侧输入框填入密码需要的特殊字符串&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>特殊字符</string>
          </property>
@@ -120,6 +205,15 @@
            <height>16777215</height>
           </size>
          </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果密码需要有特殊字符，可以勾选前面的 特殊字符 然后在这里输入密码中可以包含的特殊字符&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>./*-+@!##$%()</string>
+         </property>
+         <property name="maxLength">
+          <number>1024</number>
+         </property>
          <property name="readOnly">
           <bool>false</bool>
          </property>
@@ -131,6 +225,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QCheckBox" name="customCbox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选后 可以在右侧输入你需要的自定义密码字符串&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>自定义</string>
          </property>
@@ -147,6 +244,12 @@
            <height>16777215</height>
           </size>
          </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果需要的密码字符不在以上选项中 可以勾选前面的 自定义 然后在这里输入密码中可以包含的自定义字符串&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maxLength">
+          <number>1024</number>
+         </property>
          <property name="readOnly">
           <bool>false</bool>
          </property>
@@ -158,6 +261,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <widget class="QCheckBox" name="excludeCbox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选后 可以在右侧输入密码中不需要的字符串&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>排除字符</string>
          </property>
@@ -173,6 +279,15 @@
            <width>200</width>
            <height>16777215</height>
           </size>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果不要在密码中出现某些字符，可以勾选前面的 排除字符 然后在这里填入不需要的字符串&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>1l0o</string>
+         </property>
+         <property name="maxLength">
+          <number>1024</number>
          </property>
          <property name="readOnly">
           <bool>false</bool>
@@ -259,6 +374,30 @@
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成的密码中禁止有重复的字符&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>禁止重复</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成的密码中 禁止有顺序的字符 如:123、abc&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>禁止有序</string>
          </property>
         </widget>
        </item>
