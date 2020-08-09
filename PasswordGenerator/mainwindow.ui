@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>550</width>
     <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
+    <width>550</width>
     <height>400</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>500</width>
+    <width>550</width>
     <height>400</height>
    </size>
   </property>
@@ -30,7 +30,7 @@
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>330</y>
+      <y>335</y>
       <width>151</width>
       <height>51</height>
      </rect>
@@ -43,7 +43,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>335</y>
+      <y>340</y>
       <width>101</width>
       <height>16</height>
      </rect>
@@ -63,9 +63,17 @@
      <rect>
       <x>310</x>
       <y>30</y>
-      <width>171</width>
-      <height>351</height>
+      <width>231</width>
+      <height>361</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -78,7 +86,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>360</y>
+      <y>365</y>
       <width>101</width>
       <height>16</height>
      </rect>
@@ -87,7 +95,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;清空结果列表，填入本次生成的密码。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
-     <string>重置输出框</string>
+     <string>清空结果列表</string>
     </property>
     <property name="checked">
      <bool>true</bool>
@@ -110,7 +118,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>310</y>
+      <y>315</y>
       <width>301</width>
       <height>16</height>
      </rect>
@@ -132,13 +140,13 @@
      <string>结果列表</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>11</y>
       <width>281</width>
-      <height>291</height>
+      <height>301</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -284,7 +292,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果不要在密码中出现某些字符，可以勾选前面的 排除字符 然后在这里填入不需要的字符串&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
-          <string>1l0o</string>
+          <string>1lI0oO</string>
          </property>
          <property name="maxLength">
           <number>1024</number>
@@ -343,7 +351,7 @@
           </size>
          </property>
          <property name="text">
-          <string>8</string>
+          <string>16</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -382,7 +390,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_7">
        <item>
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="noRepeatCbox">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成的密码中禁止有重复的字符&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -392,7 +400,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_2">
+        <widget class="QCheckBox" name="disOrderCbox">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成的密码中 禁止有顺序的字符 如:123、abc&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
