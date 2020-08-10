@@ -45,6 +45,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-//    QsLogging::Logger *log;
+
+public:
+    QString savePath;
 };
 #endif // MAINWINDOW_H

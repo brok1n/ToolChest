@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QStandardPaths>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    this->log = &log;
 
     //密码个数输入框只允许输入数字并且长度最大为5
     QRegExp sizeRe("[0-9]{1,5}");
@@ -59,10 +58,10 @@ void MainWindow::generatePwd(bool num, bool lower, bool upper, QString special, 
     bool saveFile = false;
     if(!savePath.isEmpty())
     {
-        file.setFileName(savePath + QDir::separator() + QString("password_%1.txt").arg(QDateTime::currentDateTime().toTime_t()));
-        saveFile = file.open(QIODevice::WriteOnly);
+        file.setFileName(savePath);
+        saveFile = file.open(QIODevice::Append);
     }
-    QLOG_INFO() << "密码保存文件位置:" << saveFile;
+    QLOG_INFO() << "密码保存到文件:" << saveFile;
 
     //数字
     QString numStr = QString(PWD_NUMBER);
@@ -146,6 +145,7 @@ void MainWindow::generatePwd(bool num, bool lower, bool upper, QString special, 
             pwdLen += QRandomGenerator::global()->bounded(maxLen - minLen + 1);
         }
 
+        //每一个新密码使用的类型列表 都从完整密码类型列表里copy一份
         QStringList tmpType(pwdStrList);
         //密码类型是否都存在了  密码类型都存在之后就不用管类型是否必须存在了
         bool typeOk = false;
@@ -154,7 +154,7 @@ void MainWindow::generatePwd(bool num, bool lower, bool upper, QString special, 
         //根据密码长度 随机出需要的密码
         for(int n = 0; n < pwdLen; n ++)
         {
-            //密码备选项
+            //密码备选字符串
             QString pwdItem = "";
             //如果需要的类型还不全 就每个类型挑一个
             if(!typeOk)
@@ -191,7 +191,6 @@ void MainWindow::generatePwd(bool num, bool lower, bool upper, QString special, 
                 ch = pwdItem.at(charIndex);
                 chIndex = pwdCandidatesAll.indexOf(ch);
                 preChIndex = pwdCandidatesAll.indexOf(lastChar);
-                QLOG_INFO() << ch;
             } while (chIndex > 0 && preChIndex > 0 && qAbs(chIndex - preChIndex) == 1);
 
             //密码字符
@@ -299,10 +298,10 @@ void MainWindow::on_generateBtn_clicked()
     }
 
     //是否存储到桌面
-    QString savePath = "";
+    QString path = "";
     if(saveToDesktop)
     {
-        savePath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
+        path = savePath;
     }
 
     //生成密码
