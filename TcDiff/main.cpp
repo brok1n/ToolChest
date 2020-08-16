@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
     QsLogging::Logger &log = QsLogging::Logger::instance();
     initLog(a, log);
 
+    QLOG_INFO() << "文件对比工具";
+
     MainWindow w;
     w.show();
     int code = a.exec();
