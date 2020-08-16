@@ -49,26 +49,11 @@ void initLog(QApplication &a, QsLogging::Logger &log)
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
     QsLogging::Logger &log = QsLogging::Logger::instance();
     initLog(a, log);
+
     MainWindow w;
-
-    //密码存储的文件
-    QString savePath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    savePath = savePath + QDir::separator() + QString("password_%1.txt").arg(QDateTime::currentDateTime().toTime_t());
-
-    w.setSavePath(savePath);
-
-    //控制台调用程序根据参数个数判断
-//    QLOG_INFO() << argc;
-//    QLOG_INFO() << argv[0];
-    if(argc > 1)
-    {
-        QLOG_INFO() << argv[1];
-        return 1;
-    }
-
-
     w.show();
     int code = a.exec();
     QsLogging::Logger::destroyInstance();

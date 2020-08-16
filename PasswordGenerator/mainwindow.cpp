@@ -242,6 +242,16 @@ QString MainWindow::delRepeatStr(QString str)
     return s;
 }
 
+QString MainWindow::getSavePath()
+{
+    return this->savePath;
+}
+
+void MainWindow::setSavePath(QString path)
+{
+    this->savePath = path;
+}
+
 void MainWindow::on_generateBtn_clicked()
 {
     //要生成多少个密码

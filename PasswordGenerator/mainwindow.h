@@ -34,6 +34,9 @@ public:
     QString delStr(QString str, QString exclude);
     QString delRepeatStr(QString str);
 
+    QString getSavePath();
+    void setSavePath(QString path);
+
 private slots:
     void on_generateBtn_clicked();
 
@@ -45,8 +48,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
-public:
     QString savePath;
 };
 #endif // MAINWINDOW_H
