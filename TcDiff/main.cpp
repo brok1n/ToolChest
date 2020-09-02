@@ -48,6 +48,12 @@ void initLog(QApplication &a, QsLogging::Logger &log)
 
 int main(int argc, char *argv[])
 {
+
+    char* st = "abc";
+    printf("len:%d\n", sizeof(st[0]));
+    printf("len:%d\n", sizeof(st));
+
+
     QApplication a(argc, argv);
 
     QsLogging::Logger &log = QsLogging::Logger::instance();
