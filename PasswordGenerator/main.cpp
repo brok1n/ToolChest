@@ -68,6 +68,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    QLOG_INFO() << "密码生成工具";
 
     w.show();
     int code = a.exec();
