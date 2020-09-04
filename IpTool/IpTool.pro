@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 include(QsLog/QsLog.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
