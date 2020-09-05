@@ -13,4 +13,7 @@
         <file>8.png</file>
         <file>9.png</file>
     </qresource>
+    <qresource prefix="/css">
+        <file>style.css</file>
+    </qresource>
 </RCC>

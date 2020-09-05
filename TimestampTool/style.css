@@ -1,0 +1,37 @@
+
+QMainWindow {
+    background-color:#fefefe;
+}
+
+QPushButton, QComboBox {
+    border: 1px solid #46B9F0;
+    background:transparent;
+}
+
+QPushButton:hover, QComboBox:hover {
+    color: #46B9F0;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #46B9F0;
+}
+
+QPushButton:pressed {
+    border: 1px solid #157CAA;
+    color: #157CAA;
+}
+
+
+QLineEdit {
+    border: 1px solid #CCC;
+    font-size:14px;
+}
+
+QLineEdit:hover {
+    border: 1px solid #46B9F0;
+}
+
+
+QLineEdit:focus {
+    border: 1px solid #46B9F0;
+}

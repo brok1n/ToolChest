@@ -1,0 +1,195 @@
+
+/****************************
+* mainWindow style
+**/
+
+
+#title {
+    background-color: #46B9F0;
+}
+
+#title .QLabel {
+    color: #FFFFFF;
+}
+
+#mainContent {
+    background-color: #F6FBFE;
+    border:1px solid #46B9F0;
+}
+
+#downloadList {
+    border:none;
+    background-color: #F6FBFE;
+}
+
+#newTaskBtn {
+    border:none;
+    background:transparent;
+    image: url(:/fd/images/add_btn.jpg);
+}
+
+#newRightLine {
+    border:none;
+    border-left:1px solid #c0c0c0;
+}
+
+#startAllBtn {
+    border:none;
+    background-color:transparent;
+    image: url(:/fd/images/start_btn _normal.jpg);
+}
+
+#pauseAllBtn {
+    border:none;
+    background-color:transparent;
+    image: url(:/fd/images/pause_btn _normal.jpg);
+}
+
+#toolsBar {
+    background-color: #BFE1F2;
+}
+
+#statusBar {
+    background-color: #E1ECF2;
+}
+
+#lockTopCbox {
+    color: #8d8d8d;
+    spacing: 2px;
+}
+#lockTopCbox::indicator {
+    width: 20px;
+    height: 20px;
+}
+#lockTopCbox::indicator::unchecked {
+    image: url(:/fd/images/check_off.png);
+}
+#lockTopCbox::indicator::checked {
+    image: url(:/fd/images/check_on.png);
+}
+
+QProgressBar {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+QProgressBar::chunk {
+    background-color: #46B9F0;
+    padding: 0px;
+    margin: 0px;
+}
+
+#DownloadItemUi {
+    padding:0px;
+    margin:0px;
+}
+#listItemSeparator {
+    background-color: #F6FBFE;
+}
+
+/*QScrollBar:horizontal {
+    border: 2px solid grey;
+    background: #32CC99;
+    height: 15px;
+    margin: 0px 20px 0 20px;
+}
+QScrollBar::handle:horizontal {
+    background: white;
+    min-width: 20px;
+}
+QScrollBar::add-line:horizontal {
+    border: 2px solid grey;
+    background: #32CC99;
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+QScrollBar::sub-line:horizontal {
+    border: 2px solid grey;
+    background: #32CC99;
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+QScrollBar:vertical {
+      border: 2px solid grey;
+      background: #32CC99;
+      width: 15px;
+      margin: 22px 0 22px 0;
+}
+QScrollBar::handle:vertical {
+  background: white;
+  min-height: 20px;
+}
+QScrollBar::add-line:vertical {
+  border: 2px solid grey;
+  background: #32CC99;
+  height: 20px;
+  subcontrol-position: bottom;
+  subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical {
+  border: 2px solid grey;
+  background: #32CC99;
+  height: 20px;
+  subcontrol-position: top;
+  subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+  border: 2px solid grey;
+  width: 3px;
+  height: 3px;
+  background: white;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+  background: none;
+}*/
+
+
+/**
+* mainWindow style
+****************************/
+
+
+/****************************
+* newTaskDialog style
+**/
+#NewTaskDialog {
+    background-color:  #F6FBFE;
+}
+
+#newTaskTitle {
+    background-color: #46B9F0;
+}
+
+#newTaskTitle .QLabel {
+    color: #FFFFFF;
+}
+
+#newTaskAddrEdit {
+    border: 1px solid #BFE1F2;
+}
+
+#newTaskSaveDirEdit {
+    border: 1px solid #BFE1F2;
+}
+
+#newTaskSelectDirBtn {
+    border: none;
+    background-color: #46B9F0;
+    color: #FFFFFF;
+}
+
+#newTaskBottomBox {
+    background-color: #E3EEF4;
+}
+
+#newTaskDownloadBtn {
+    border: none;
+    background-color: #46B9F0;
+    color: #FFFFFF;
+}
+/**
+* newTaskDialog style
+****************************/
