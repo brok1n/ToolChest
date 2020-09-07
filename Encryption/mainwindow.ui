@@ -10,12 +10,171 @@
     <height>600</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>MainWindow</string>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>加密解密工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="md5">
+     <attribute name="title">
+      <string>MD5</string>
+     </attribute>
+     <widget class="QLineEdit" name="md5FileInp">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>661</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>选择或拖入要计算 MD5 的文件</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="md5SelectFileBtn">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>选择文件</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="md5OutBw">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>360</y>
+        <width>531</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>这里将显示计算结果</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="md5ExecBtn">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>360</y>
+        <width>231</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Adobe Devanagari</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>计算</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="md5SourceTxtEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>771</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>这里输入要计算 MD5 的字符串</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="file">
+     <attribute name="title">
+      <string>文件校验</string>
+     </attribute>
+     <widget class="QPushButton" name="fileSelectFileBtn">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>选择文件</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="fileInp">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>661</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>选择或拖入要校验的文件</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="fileOutTb">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>771</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

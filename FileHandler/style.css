@@ -1,0 +1,43 @@
+
+QMainWindow {
+    background-color:#fefefe;
+}
+
+QPushButton, QComboBox {
+    border: 1px solid #46B9F0;
+    background:transparent;
+}
+
+QPushButton:hover, QComboBox:hover {
+    color: #46B9F0;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #46B9F0;
+}
+
+QPushButton:pressed {
+    border: 1px solid #157CAA;
+    color: #157CAA;
+}
+
+
+QLineEdit, QTextEdit, QPlainTextEdit, QTextBrowser {
+    border: 1px solid #CCC;
+    font-size:14px;
+}
+
+QLineEdit:hover, QTextEdit:hover, QPlainTextEdit:hover, QTextBrowser:hover {
+    border: 1px solid #46B9F0;
+}
+
+
+QLineEdit:focus,QTextEdit:focus, QPlainTextEdit:focus, QTextBrowser:focus {
+    border: 1px solid #46B9F0;
+}
+
+
+QTabBar::tab{
+    width:100px;
+    height:40px;
+}

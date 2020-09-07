@@ -32,3 +32,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 
 RC_FILE=logo.rc
+
+RESOURCES += \
+    res.qrc
+
+DISTFILES += \
+    style.css
