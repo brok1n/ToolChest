@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     //默认样式
     this->setStyle("style");
 
-
+    ui->filePathInp->installEventFilter(this);
 }
 
 MainWindow::~MainWindow()
@@ -30,35 +30,19 @@ void MainWindow::setStyle(QString styleName) {
     this->setStyleSheet(style);
 }
 
-void MainWindow::dragEnterEvent(QDragEnterEvent *event)
+bool MainWindow::eventFilter(QObject *watched, QEvent *event)
 {
-    int x = ui->filePathInp->pos().x();
-    int y = ui->filePathInp->pos().y();
-    int w = ui->filePathInp->width();
-    int h = ui->filePathInp->height();
-
-    int ex = event->pos().x();
-    int ey = event->pos().y();
-
-    if(ex >= x && ey >= y && ex <= (x+w) && ey <= (y+h))
+    if(watched == ui->filePathInp && event->type() == QEvent::DragEnter)
     {
-        event->acceptProposedAction();
+        QDragEnterEvent* dragEvent = static_cast<QDragEnterEvent*>(event);
+        QString filePath = dragEvent->mimeData()->urls().first().toLocalFile();
+
+        QLOG_INFO() << "拖拽文件:" << filePath;
+
+        ui->filePathInp->setText(filePath);
+        return true;
     }
-    else
-    {
-        event->ignore();
-    }
-}
-
-void MainWindow::dropEvent(QDropEvent *event)
-{
-
-    QString filePath = event->mimeData()->urls().first().toLocalFile();
-
-    QLOG_INFO() << "拖拽文件:" << filePath;
-
-    ui->filePathInp->setText(filePath);
-
+    return QMainWindow::eventFilter(watched, event);
 }
 
 void MainWindow::on_selectFileBtn_clicked()

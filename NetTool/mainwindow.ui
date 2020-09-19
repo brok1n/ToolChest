@@ -11,11 +11,361 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>网络工具</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>TCP</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QWidget" name="tcpServWidget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>371</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="0,3,9,6">
+           <item>
+            <widget class="QLabel" name="tcpServTitleLbl">
+             <property name="text">
+              <string>TCP服务器</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="tcpServerCtlGbox">
+             <property name="minimumSize">
+              <size>
+               <width>353</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>控制区</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,3,0,3">
+                <item>
+                 <widget class="QLabel" name="tcpServIpLbl">
+                  <property name="text">
+                   <string>IP</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="tcpServIpCbox">
+                  <item>
+                   <property name="text">
+                    <string>0.0.0.0</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>127.0.0.1</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="tcpServPortLbl">
+                  <property name="text">
+                   <string>端口</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="tcpServPortEdit">
+                  <property name="text">
+                   <string>9988</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3,1">
+                <item>
+                 <widget class="QLabel" name="tcpServStatusLbl">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="tcpServStartBtn">
+                  <property name="text">
+                   <string>启动</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="tcpServRecvGbox">
+             <property name="minimumSize">
+              <size>
+               <width>353</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>接收区</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QTextEdit" name="tcpServRecvTxtEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="tcpServSendGbox">
+             <property name="minimumSize">
+              <size>
+               <width>353</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>发送区</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QTextEdit" name="tcpServSendTxtEdit"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="tcpServSendTxtBtn">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>97</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>发送</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QLineEdit" name="tcpServSendFilePathEdit"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="tcpServSendFileBtn">
+                  <property name="text">
+                   <string>发送文件</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="tcpClientWidget" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,3,9,6">
+           <item>
+            <widget class="QLabel" name="tcpClientTitleLbl">
+             <property name="text">
+              <string>TCP客户端</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="tcpClientCtlGbox">
+             <property name="minimumSize">
+              <size>
+               <width>354</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>控制区</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,3,0,3">
+                <item>
+                 <widget class="QLabel" name="tcpClientIpLbl">
+                  <property name="text">
+                   <string>IP</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="tcpClientIpEdit">
+                  <property name="text">
+                   <string>127.0.0.1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="tcpClientPortLbl">
+                  <property name="text">
+                   <string>端口</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="tcpClientPortEdit">
+                  <property name="text">
+                   <string>9988</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="3,1">
+                <item>
+                 <widget class="QLabel" name="tcpClientStatusLbl">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="tcpClientStartBtn">
+                  <property name="text">
+                   <string>连接</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="tcpClientRecvGbox">
+             <property name="minimumSize">
+              <size>
+               <width>354</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>接收区</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QTextEdit" name="tcpClientRecvTxtEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>200</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="tcpClientSendGbox">
+             <property name="minimumSize">
+              <size>
+               <width>354</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>发送区</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QTextEdit" name="tcpClientSendTxtEdit"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="tcpClientSendTxtBtn">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>97</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>发送</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QLineEdit" name="tcpClientSendFilePathEdit"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="tcpClientSendFileBtn">
+                  <property name="text">
+                   <string>发送文件</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>UDP</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>

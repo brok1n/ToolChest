@@ -19,8 +19,7 @@ public:
     //修改样式
     void setStyle(QString styleName);
 
-    void dragEnterEvent(QDragEnterEvent *event);
-    void dropEvent(QDropEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event);
 
 private slots:
     void on_selectFileBtn_clicked();
