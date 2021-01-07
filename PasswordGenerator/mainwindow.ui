@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>密码生成器</string>
+   <string>密码生成器 V1.0 by brok1n QQ:452700765</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="maximumSize">
@@ -457,6 +457,9 @@
      </property>
      <property name="text">
       <string>大写字母</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>

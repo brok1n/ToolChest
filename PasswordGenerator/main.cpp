@@ -35,7 +35,7 @@ void initLog(QApplication &a, QsLogging::Logger &log)
 
     // 2. add two destinations
     DestinationPtr fileDestination(DestinationFactory::MakeFileDestination(
-     sLogPath, EnableLogRotation, MaxSizeBytes(512), MaxOldLogCount(2)));
+     sLogPath, EnableLogRotation, MaxSizeBytes(100 * 1024 * 1024), MaxOldLogCount(2)));
 //    DestinationPtr debugDestination(DestinationFactory::MakeDebugOutputDestination());
     DestinationPtr functorDestination(DestinationFactory::MakeFunctorDestination(&logFunction));
 //    log.addDestination(debugDestination);
